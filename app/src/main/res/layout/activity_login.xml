@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Titre de l'activité -->
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        android:textColor="#000000" />
+
+    <!-- Champ de texte pour le nom d'utilisateur -->
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username_hint"
+        android:layout_below="@id/loginTitle"
+        android:layout_marginTop="32dp"
+        android:inputType="text"
+        android:autofillHints="" />
+
+    <!-- Champ de texte pour le mot de passe -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="16dp"
+        android:autofillHints="" />
+
+    <!-- Bouton pour basculer la visibilité du mot de passe -->
+    <ImageButton
+        android:id="@+id/togglePasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/passwordEditText"
+        android:layout_alignBottom="@id/passwordEditText"
+        android:background="@null"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_visibility" />
+
+    <!-- Bouton de connexion -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="24dp" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Cartes Animées</string>
+    <string name="connect">Se Connecter</string>
+    <string name="logout">Se Déconnecter</string>
+    <string name="username_hint">Nom d\'utilisateur</string>
+    <string name="password_hint">Mot de passe</string>
+    <string name="login">Connexion</string>
+    <string name="title_activity_login">Titre de l\'activity de connexion</string>
+    <string name="hint_verification_code">Entrez le code de vérification</string>
+    <string name="verify">Vérifier</string>
+    <string name="series">Séries</string>
+    <string name="action_return">Retour</string>
+    <string name="title_activity_series">Séries Animées</string>
+    <string name="title_activity_card_detail">Détail de la Carte Animée</string>
+    <string name="btn_return">Retour</string>
+
+    <string-array name="series_titles">
+        <item>Série 1: Les Aventuriers</item>
+        <item>Série 2: Énigmes Cosmiques</item>
+        <item>Série 3: Histoires de la Terre</item>
+        <!-- Add more series as needed -->
+    </string-array>
+    <!-- Other strings below -->
+</resources>
+
