@@ -2,16 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
-    <!-- ListView to display cards -->
+    <!-- Title for the cards page -->
+    <TextView
+        android:id="@+id/tvCardsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liste des Animations"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#EEEEEE"/>
+
+    <!-- Series information -->
+    <TextView
+        android:id="@+id/tvSeriesInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCardsTitle"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+    <!-- ListView to display animations -->
     <ListView
-        android:id="@+id/lvCards"
+        android:id="@+id/lvAnimations"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/tvSeriesInfo"
         android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
-
-
+        android:dividerHeight="1dp"/>
 </RelativeLayout>

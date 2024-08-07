@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -46,6 +47,20 @@
             android:name=".ui.main.CardDetailActivity"
             android:exported="true"
             android:label="@string/title_activity_card_detail">
+        </activity>
+
+        <!-- CardsActivity for listing animated cards -->
+        <activity
+            android:name=".ui.main.CardsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_cards">
+        </activity>
+
+        <!-- VerificationActivity for user verification after login -->
+        <activity
+            android:name=".ui.main.VerificationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_verification">
         </activity>
 
     </application>

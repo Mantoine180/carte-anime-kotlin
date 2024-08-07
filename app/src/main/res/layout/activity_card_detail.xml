@@ -2,23 +2,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:padding="16dp">
 
+    <!-- Title for the animation -->
     <TextView
-        android:id="@+id/tvCardName"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAnimationLibelle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:textSize="24sp"
-        android:textColor="#000000" />
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#EEEEEE"/>
 
+    <!-- Button to view image -->
     <Button
-        android:id="@+id/btnReturn"
+        android:id="@+id/btnImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_return"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
+        android:text="View Image"
+        android:layout_below="@id/tvAnimationLibelle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
 
+    <!-- Button to listen to sound -->
+    <Button
+        android:id="@+id/btnSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listen to Sound"
+        android:layout_below="@id/tvAnimationLibelle"
+        android:layout_toEndOf="@id/btnImage"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- ImageView to display the image -->
+    <ImageView
+        android:id="@+id/ivAnimationImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnImage"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Animation Image"/>
 </RelativeLayout>

@@ -13,6 +13,8 @@
     <string name="title_activity_series">Séries Animées</string>
     <string name="title_activity_card_detail">Détail de la Carte Animée</string>
     <string name="btn_return">Retour</string>
+    <string name="title_activity_cards">Carte Animée</string>
+    <string name="title_activity_verification">Vérification de connexion</string>
 
     <string-array name="series_titles">
         <item>Série 1: Les Aventuriers</item>
