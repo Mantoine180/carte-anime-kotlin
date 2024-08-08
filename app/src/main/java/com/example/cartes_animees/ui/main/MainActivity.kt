@@ -18,8 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val logoutButton: Button = findViewById(R.id.btnLogout)
         logoutButton.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+            logout()
         }
 
         val seriesButton: Button = findViewById(R.id.btnSeries)
@@ -27,5 +26,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SeriesActivity::class.java))
         }
     }
-}
 
+    private fun logout() {
+        // Efface les préférences partagées
+        val sharedPreferences = getSharedPreferences("app_prefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
+
+        // Redirige vers l'écran de connexion
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+}

@@ -1,46 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".ui.main.CardDetailActivity">
 
     <!-- Title for the animation -->
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvAnimationLibelle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:gravity="center"
         android:padding="16dp"
-        android:background="#EEEEEE"/>
+        android:background="@color/grey_200"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Button to view image -->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnImage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="View Image"
-        android:layout_below="@id/tvAnimationLibelle"
-        android:layout_alignParentStart="true"
+        app:layout_constraintTop_toBottomOf="@id/tvAnimationLibelle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSound"
         android:layout_marginTop="16dp"/>
 
     <!-- Button to listen to sound -->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSound"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Listen to Sound"
-        android:layout_below="@id/tvAnimationLibelle"
-        android:layout_toEndOf="@id/btnImage"
+        app:layout_constraintTop_toBottomOf="@id/tvAnimationLibelle"
+        app:layout_constraintStart_toEndOf="@id/btnImage"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"/>
 
     <!-- ImageView to display the image -->
-    <ImageView
-        android:id="@+id/ivAnimationImage"
-        android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewImage"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnImage"
         android:layout_marginTop="16dp"
-        android:contentDescription="Animation Image"/>
-</RelativeLayout>
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAnimationImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Animation Image"/>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
