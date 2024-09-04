@@ -27,7 +27,7 @@ class VerificationActivity : AppCompatActivity() {
 
         verifyButton.setOnClickListener {
             val code = verificationCodeEditText.text.toString()
-            if (code.isNotEmpty() && code.matches(Regex("^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}\$"))) {
+            if (code.isNotEmpty() && code.matches(Regex("^[a-zA-Z0-9]{5}\$"))) {
                 verifyCode(username, code)
             } else {
                 Toast.makeText(this, "Veuillez entrer un code de vérification valide.", Toast.LENGTH_LONG).show()
