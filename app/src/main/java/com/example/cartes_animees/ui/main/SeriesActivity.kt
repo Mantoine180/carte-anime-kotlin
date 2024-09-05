@@ -35,7 +35,7 @@ class SeriesActivity : AppCompatActivity() {
 
     private fun fetchSeries(token: String, seriesListView: ListView) {
         val request = Request.Builder()
-            .url("http://10.0.2.2:8080/series")
+            .url("http://192.168.1.178:8080/series")
             .addHeader("Accept", "application/json")
             .addHeader("Authorization", "Bearer $token")
             .build()

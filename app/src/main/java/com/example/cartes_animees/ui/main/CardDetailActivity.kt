@@ -39,12 +39,12 @@ class CardDetailActivity : AppCompatActivity() {
         }
 
         imageButton.setOnClickListener {
-            val imageUrl = "http://10.0.2.2:8080/animations/$animationId/image"
+            val imageUrl = "http://192.168.1.178:8080/animations/$animationId/image"
             fetchImage(imageUrl, imageView)
         }
 
         soundButton.setOnClickListener {
-            val soundUrl = "http://10.0.2.2:8080/animations/$animationId/sound"
+            val soundUrl = "http://192.168.1.178:8080/animations/$animationId/sound"
             fetchAndPlayAudio(soundUrl)
         }
     }
@@ -54,7 +54,7 @@ class CardDetailActivity : AppCompatActivity() {
         val token = sharedPreferences.getString("auth_token", null)
 
         val request = Request.Builder()
-            .url("http://10.0.2.2:8080/animations/$animationId")
+            .url("http://192.168.1.178:8080/animations/$animationId")
             .addHeader("Accept", "application/json")
             .addHeader("Authorization", "Bearer $token")
             .build()

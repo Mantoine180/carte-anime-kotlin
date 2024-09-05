@@ -8,7 +8,7 @@
     android:background="@color/white"
     tools:context=".ui.main.CardDetailActivity">
 
-    <!-- Title for the animation -->
+    <!-- Titre de l'animation -->
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvAnimationLibelle"
         android:layout_width="0dp"
@@ -22,30 +22,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Button to view image -->
+    <!-- Bouton pour afficher l'image -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="View Image"
+        android:text="Afficher l'image"
         app:layout_constraintTop_toBottomOf="@id/tvAnimationLibelle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnSound"
         android:layout_marginTop="16dp"/>
 
-    <!-- Button to listen to sound -->
+    <!-- Bouton pour écouter le son -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSound"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Listen to Sound"
+        android:text="Écouter le son"
         app:layout_constraintTop_toBottomOf="@id/tvAnimationLibelle"
         app:layout_constraintStart_toEndOf="@id/btnImage"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"/>
 
-    <!-- ImageView to display the image -->
+    <!-- ImageView pour afficher l'image -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewImage"
         android:layout_width="0dp"
@@ -60,7 +60,7 @@
             android:id="@+id/ivAnimationImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Animation Image"/>
+            android:contentDescription="Image de l'animation"/>
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

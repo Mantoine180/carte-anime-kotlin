@@ -41,7 +41,7 @@ class CardsActivity : AppCompatActivity() {
 
     private fun fetchSeriesDetails(seriesId: Int, token: String, seriesInfoTextView: TextView, animationsListView: ListView) {
         val request = Request.Builder()
-            .url("http://10.0.2.2:8080/series/$seriesId")
+            .url("http://192.168.1.178:8080/series/$seriesId")
             .addHeader("Accept", "application/json")
             .addHeader("Authorization", "Bearer $token")
             .build()

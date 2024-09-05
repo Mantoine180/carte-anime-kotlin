@@ -46,7 +46,7 @@ class VerificationActivity : AppCompatActivity() {
         val requestBody = json.toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
 
         val request = Request.Builder()
-            .url("http://10.0.2.2:8080/api/auth/verify")
+            .url("http://192.168.1.178:8080/api/auth/verify")
             .post(requestBody)
             .build()
 
