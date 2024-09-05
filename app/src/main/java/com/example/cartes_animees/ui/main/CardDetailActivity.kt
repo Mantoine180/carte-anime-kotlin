@@ -1,15 +1,22 @@
 package com.example.cartes_animees.ui.main
 
 import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
+import android.graphics.drawable.AnimatedImageDrawable
+import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.cartes_animees.R
+import com.example.cartes_animees.model.Animation
 import okhttp3.*
 import java.io.File
 import java.io.FileOutputStream
@@ -31,6 +38,7 @@ class CardDetailActivity : AppCompatActivity() {
         val imageButton: Button = findViewById(R.id.btnImage)
         val soundButton: Button = findViewById(R.id.btnSound)
         val imageView: ImageView = findViewById(R.id.ivAnimationImage)
+
 
         animationLibelleTextView.text = animationLibelle
 
@@ -99,10 +107,11 @@ class CardDetailActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
                     val bytes = response.body?.bytes()
-                    val bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes?.size ?: 0)
                     Log.d(TAG, "Image fetched successfully")
                     runOnUiThread {
-                        imageView.setImageBitmap(bitmap)
+                        Glide.with(this@CardDetailActivity)
+                            .load(bytes) // Chargez les octets directement
+                            .into(imageView)
                     }
                 } else {
                     Log.e(TAG, "Failed to fetch image, response code: ${response.code}")
